@@ -1,13 +1,164 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&family=Merriweather:wght@300;400&family=Montserrat:wght@300;400;500;600&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --theme-color: rgb(1, 90, 141);
+    --border-color: rgb(207, 207, 207)
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*{
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-heading{
+    color: white;
+    display: block;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: var(--theme-color);
+    padding: 16px 4px;
+}
+
+.calculator{
+    margin: 25px auto;
+    border: 1px solid var(--border-color);
+    width: 60%;
+}
+
+/* Selection Bar and Input  */
+
+.selection-container{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 30px 0;
+}
+
+.selection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+}
+
+.input-container{
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.input{
+    width: 45%;
+    display: flex;
+}
+
+.input-container input{
+    width: 80%;
+    padding: 5px 10px;
+    border: 2px solid var(--theme-color);
+    border-radius: 5px 0 0 5px;
+}
+
+.input-container input:focus{
+    outline: none;
+    border: 3px solid var(--theme-color);
+}
+
+.symbol{
+    border-top: 2px solid var(--theme-color);
+    border-right: 2px solid var(--theme-color);
+    border-bottom: 2px solid var(--theme-color);
+    border-radius: 0 5px 5px 0;
+    padding: 5px 10px;
+    cursor: default;
+}
+
+.slider{
+    width: 80%;
+}
+
+.css-187mznn-MuiSlider-root{
+    /* color: var(--theme-color); */
+    color: green;
+}
+
+/* Data container  */
+
+.data-container{
+    width: 100%;
+    display: flex;
+}
+
+.text-data-container{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--border-color);
+}
+
+.text-data{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    border-top: 1px solid var(--border-color);
+}
+
+.text-data .money-amount{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+/* Pie Chart section  */
+
+.pie-container{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    border-top: 1px solid var(--border-color);
+}
+
+.pie-container .heading{
+    font-weight: 500;
+}
+
+.chart-info{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid var(--border-color);
+    padding: 2px 6px;
+}
+
+.green-container, .orange-container{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.green-circle, .orange-circle{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.green-circle{
+    background-color: green;
+}
+
+.green-container p, .orange-container p{
+    font-size: .8rem;
+    font-weight: 500;
+}
+
+.orange-circle{
+        background-color: orange;
 }
